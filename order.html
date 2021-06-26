@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Here I am making my CSS in html  -->
+    <style>
+        .center {
+            text-align: center;  
+            font-size: x-large;
+        }
+        body  {
+            font-size: x-large;
+            background-image: url("black.jpg");
+            color:aliceblue;}
+     
+        h1{
+            color:#cccccc;
+            position: relative;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .column1 { 
+            float: left;
+            position:fixed;
+            width: 25%;   
+        }
+      
+        .column2 {
+            position:absolute;
+            width:50%;
+            left:25%;
+            
+        }
+        .column3 {
+            position: absolute;
+            width: 25%;
+            right: 0; 
+           
+        }
+     
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+        </head>
+  
+<!-- Here I am calling the inIt function dynamically -->
+<body onload="inIt()">
+      <!-- Tried to come with a better name -->
+    <h1><b>DeliveryIn</b>
+    <div style="font-size:large;">making life easy.</div></h1>
+    
+    <!-- Making the dropmenu -->
+    <div class= "center" id = "Select">
+        <select  id ="res" style="font-size: x-large;" onchange="displayInfo()" >
+    `       <option>Select Restaurant </option>
+        </select>
+    </div>
+
+    <!-- making my 3 colomns -->
+    <div class ="row">
+        <div class ="column1" id ="info" ></div>
+        <div class ="column2" id = "meal"></div>
+        <div class ="column3">
+            <div id ="order"></div>
+            <div id = "final"></div>
+         </div>
+    </div>
+
+    <!-- calling my java script -->
+    <script src="client.js"> </script>
+
+</body>
+</html>
